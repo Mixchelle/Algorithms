@@ -17,7 +17,7 @@
 // Deixe a matriz inalterada.
 // Retorne a matriz resultante.
 
-function generateCyclotronMatrix(N) {
+const generateCyclotronMatrix = (N) => {
   let matrix = [];
   for (let i = 0; i < N; i++) {
     let row = [];
@@ -29,7 +29,7 @@ function generateCyclotronMatrix(N) {
   return matrix;
 }
 
-function accelerateParticle(particle, matrix) {
+const accelerateParticle = (particle, matrix) => {
   let acceleratedMatrix = [...matrix]; 
   console.log(matrix.length)
   for (let i = 0; i < matrix.length; i++) {
@@ -61,7 +61,7 @@ function accelerateParticle(particle, matrix) {
   return acceleratedMatrix;
 }
 
-function ciclotron(particle, N) {
+const ciclotron = (particle, N) => {
   let matrix = generateCyclotronMatrix(N);
   if (particle !== "e" && particle !== "p" && particle !== "n") {
     return matrix; 
